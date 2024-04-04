@@ -18,7 +18,7 @@ export default function Home() {
 
   React.useEffect(() => {
     async function fetchPlayers() {
-      const res = await fetch(`http://localhost:3000/api/players`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/players`);
       const data = await res.json();
       const sortedAndTopPlayers = data.players
         .sort((a: Player, b: Player) => b.kills - a.kills)

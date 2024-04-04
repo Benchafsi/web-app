@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const MONGO_URL = "mongodb+srv://giasinbenchafsi:0Q0vXbPPiKZZk9rY@bullets-requiem.w9lsozc.mongodb.net/?retryWrites=true&w=majority&appName=bullets-requiem";
+const MONGO_URL = process.env.MONGO_URL;
 
 const dbConnect = async () => {
   // Connect to the database
